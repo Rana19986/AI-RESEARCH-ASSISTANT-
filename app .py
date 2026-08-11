@@ -1,2 +1,8 @@
 
-print("AI Research Assistant app.py created successfully!")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "AI Research Assistant is running!"}
